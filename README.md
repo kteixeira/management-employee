@@ -7,18 +7,21 @@ A basic system to employees management
 * Instructions
    - sudo pip install virtualenv
    - git clone git@github.com:kteixeira/management-employee.git
-   - python3 -m venv env
+   - virtualenv -p python3 envname
+   - pip install --upgrade virtualenv
    - source env/bin/activate
    - pip install --upgrade pip
    - cd management-employee
-   - sudo pip install -r requirements.txt
+   - pip install -r requirements.txt
+   - *(if you have not created it, create database: 
+   CREATE DATABASE management_employee CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci)*
    - create a new settings file from 
    /management-employee/settings.example.py 
    and change the name to settings.py **(will stay /management-employee/settings.py)**
    - configure database on file /management-employee/settings.py
-   - (create database: CREATE DATABASE management_employee CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci)
-   - run migrate "python manager.py makemigrations"
-   - run migrate tables "python manager.py migrate"
+   - run migrate: python manage.py migrate
+   - python manage.py makemigrations src
+   - python manage.py migrate src
 
 ### Create a user admin
   - python manage.py createsuperuser
