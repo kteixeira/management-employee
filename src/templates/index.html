@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
     <head>
-        <title>
-        	Teste LuizaLabs
-        </title>
+        <title>Desafio LuizaLabs</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <style>
+            .page-header {
+                background-color: #1C86EE;
+                margin-top: 0;
+                padding: 20px 20px 20px 40px;
+            }
+
+            .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+                color: #ffffff;
+                font-size: 34pt;
+                text-decoration: none;
+            }
+
+            h1, h2, h3, h4 {
+                font-family: 'Helvetica', cursive;
+            }
+        </style>
     </head>
-	<body style="text-align: center; margin-top: 100px;">
-        <img src="http://luiza-labs.herokuapp.com/static/img/luizalabs.png" style="margin-top:50px;" />
+	<body style="text-align: center; margin-top: 0px;">
+        <div class="page-header">
+            <h1><a href="/admin">Desafio LuizaLabs</a></h1>
+        </div>
+        <div>
+            <a href="/admin">
+                <img src="http://luiza-labs.herokuapp.com/static/img/luizalabs.png" style="margin-top:50px;" />
+            </a>
+        </div>
 	</body>
 </html>
