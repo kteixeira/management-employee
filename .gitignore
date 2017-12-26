@@ -1,3 +1,5 @@
 venv
 src/migrations/
 .cache/
+api/settings.py
+*.pyc
