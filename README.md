@@ -2,7 +2,7 @@
 
 A basic system to employees management
 
-## Instalação
+## Installation
 
 * Instructions
    - sudo pip install virtualenv
