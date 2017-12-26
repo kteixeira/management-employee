@@ -9,7 +9,7 @@ A basic system to employees management
    - git clone git@github.com:kteixeira/management-employee.git
    - python3 -m venv env
    - source env/bin/activate
-   - pip install --upgrade pip (upgrade pip)
+   - pip install --upgrade pip
    - cd management-employee
    - sudo pip install -r requirements.txt
    - create a new settings file from 
