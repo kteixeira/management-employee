@@ -24,7 +24,9 @@ A basic system to employees management
    - python manage.py migrate src
 
 ### Create a user admin
-  - python manage.py createsuperuser
+  - python manage.py createsuperuser 
+  **the first admin user must have the credentials: 
+  username='admin' and password='default123'**
   
 ### Run Project
   - python manage.py runserver
