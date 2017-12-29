@@ -31,7 +31,9 @@ class EmployeeTest(APITestCase):
     def setUp(self):
         self.client = APIClient()
         self.client.login(username='admin', password='default123')
-        self.__data_to_save = {'name': 'Kaio', 'email': 'kaio.teco@gmail.com', 'department': 'WebDevelopment'}
+        self.__data_to_save = {'name': 'Kaio',
+                               'email': 'kaio.teco@gmail.com',
+                               'department': 'WebDevelopment'}
         self.create_employee()
 
     @pytest.mark.django_db
@@ -45,7 +47,9 @@ class EmployeeTest(APITestCase):
 
     @pytest.mark.django_db
     def test_update_employee(self):
-        response = self.client.put('/api/employees/' + format(self.__data_create_employee.id) + '/',
+        response = self.client.put('/api/employees/' +
+                                   format(self.__data_create_employee.id) +
+                                   '/',
                                    self.__data_to_save,
                                    format='json')
 
@@ -53,7 +57,9 @@ class EmployeeTest(APITestCase):
 
     @pytest.mark.django_db
     def test_get_employee(self):
-        response = self.client.get('/api/employees/' + format(self.__data_create_employee.id) + '/')
+        response = self.client.get('/api/employees/' +
+                                   format(self.__data_create_employee.id) +
+                                   '/')
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
@@ -71,8 +77,12 @@ class EmployeeTest(APITestCase):
 
     @pytest.mark.django_db
     def test_delete(self):
-        response = self.client.delete('/api/employees/' + format(self.__data_create_employee.id) + '/',
+        response = self.client.delete('/api/employees/' +
+                                      format(self.__data_create_employee.id) +
+                                      '/',
                                       {"id": self.__data_create_employee.id},
                                       format='json')
 
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT, status.HTTP_200_OK)
+        self.assertEqual(response.status_code,
+                         status.HTTP_204_NO_CONTENT,
+                         status.HTTP_200_OK)
